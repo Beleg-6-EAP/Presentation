@@ -18,6 +18,9 @@ jobs:
       - name: Update font cache
         run: fc-cache -fv
 
+      - name: Debug available fonts
+        run: fc-list
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
