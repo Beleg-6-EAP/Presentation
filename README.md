@@ -1,3 +1,5 @@
+[![Build](https://github.com/Beleg-6-EAP/Presentation/actions/workflows/build-latex-push-pdf.yml/badge.svg)](https://github.com/Beleg-6-EAP/Presentation/actions/workflows/build-latex-push-pdf.yml)
+
 # Kompilierung mit XeLaTeX & Biber
 
 Ich kompiliere mit der IDE, aber die macht vermutlich auch nur das hier:
