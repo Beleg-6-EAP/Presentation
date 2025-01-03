@@ -18,6 +18,9 @@ jobs:
       - name: Update font cache
         run: fc-cache -fv
 
+      - name: List fonts for debugging
+        run: fc-list | grep "Liberation"
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
@@ -26,10 +29,7 @@ jobs:
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
           extra_fonts: | 
-            ./usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf
-            ./usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf
-            ./usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf
-            ./usr/share/fonts/truetype/liberation/LiberationSans-BoldItalic.ttf
+            ./usr/share/fonts/truetype/liberation/*.ttf
 
       # Store the PDF in the root of the repository
       - name: Move PDF to root
