@@ -14,3 +14,5 @@ jobs:
         with:
           working_directory: src
           root_file: main.tex
+          latexmk_use_xelatex: true
+          latexmk_shell_escape: true
