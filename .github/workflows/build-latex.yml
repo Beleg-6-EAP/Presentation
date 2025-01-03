@@ -12,6 +12,9 @@ jobs:
       - name: Install Liberation Sans font
         run: sudo apt-get update && sudo apt-get install -y fonts-liberation
 
+      - name: Update font cache
+        run: fc-cache -fv
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
