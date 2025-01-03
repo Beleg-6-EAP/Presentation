@@ -26,10 +26,7 @@ jobs:
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
           extra_fonts: | 
-            /usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf
-            /usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf
-            /usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf
-            /usr/share/fonts/truetype/liberation/LiberationSans-BoldItalic.ttf
+            /usr/share/fonts/truetype/liberation/*.ttf
 
       # Store the PDF in the root of the repository
       - name: Move PDF to root
