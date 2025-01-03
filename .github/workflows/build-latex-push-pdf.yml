@@ -26,7 +26,7 @@ jobs:
         with:
           working_directory: src
           root_file: main.tex
-          latexmk_use_xelatex: true
+          latexmk_use_lualatex: true
           latexmk_shell_escape: true
 
       # Store the PDF in the root of the repository
