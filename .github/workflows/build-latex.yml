@@ -9,8 +9,8 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v4
 
-      - name: Install MS-Core-Fonts
-        run: sudo apt-get update && sudo apt-get install ttf-mscorefonts-installer
+      - name: Install Liberation Sans font
+        run: sudo apt-get update && sudo apt-get install -y fonts-liberation
 
       - name: Update font cache
         run: fc-cache -fv
@@ -22,3 +22,8 @@ jobs:
           root_file: main.tex
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
+          extra_fonts: |
+            /usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf
+            /usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf
+            /usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf
+            /usr/share/fonts/truetype/liberation/LiberationSans-BoldItalic.ttf
