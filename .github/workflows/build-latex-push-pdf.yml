@@ -12,15 +12,6 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v4
 
-      - name: Install MS-Core-Fonts
-        run: sudo apt-get update && sudo apt-get install ttf-mscorefonts-installer
-
-      - name: Update font cache
-        run: fc-cache -fv
-
-      - name: Debug available fonts
-        run: fc-list
-
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
@@ -28,6 +19,11 @@ jobs:
           root_file: main.tex
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
+          extra_fonts: | 
+            /usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf
+            /usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf
+            /usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf
+            /usr/share/fonts/truetype/liberation/LiberationSans-BoldItalic.ttf
 
       # Store the PDF in the root of the repository
       - name: Move PDF to root
