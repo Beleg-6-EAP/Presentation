@@ -1,0 +1,45 @@
+\ProvidesPackage{Packages}
+
+\usetheme{HTWKLeipzig}
+\usepackage[utf8]{inputenc} % Character encoding
+\usepackage{siunitx}    % Enable SI units
+\usepackage[ngerman]{babel}     %german language
+\usepackage{import}
+\usepackage[backend=biber]{biblatex}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{tabularx}
+
+% Math
+\usepackage{stmaryrd}
+
+
+\usepackage{pifont} % For tick and cross symbols
+\usepackage{xcolor} % For custom colors
+
+% Custom commands for green ticks and red crosses
+\newcommand{\cmark}{\textcolor{green}{\ding{51}}} % Green checkmark
+\newcommand{\xmark}{\textcolor{red}{\ding{55}}}   % Red cross
+
+% --- Code ---
+\usepackage{minted} % Includes several programming languages and styles, visit --https://www.ntnu.no/wiki/display/imtsoftware/Code+in+LaTeX-- for more information and examples
+\usepackage{listings}
+
+%%%%%%%%%%%%%% Noteblock %%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{mynote}[1][Note]{
+	colback=white,
+	colbacktitle=mainColor,
+	coltitle=white,
+	colframe=mainColor,
+	titlerule=1pt,
+	title={\strut#1}
+}
+%%%%%%%%%%%%%% Alertblock %%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{myalert}[1][Alert]{
+	colback=white,
+	colbacktitle=red,
+	coltitle=white,
+	colframe=red,
+	titlerule=1pt,
+	title={\strut#1}
+}

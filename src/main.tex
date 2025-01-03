@@ -1,0 +1,25 @@
+%------------- Defines the beamer size ------------------------
+\newcommand{\BeamerAspectRatio}{169}
+
+%--------------- Defines beamer document ----------------------
+\documentclass[aspectratio=\BeamerAspectRatio]{beamer}
+
+\usepackage{Packages}
+\usepackage{lipsum}
+
+\import{./}{TitlePageInfo.tex}
+\addbibresource{references.bib}
+
+%-------------- Start documents -------------------------------
+\begin{document}
+\maketitlepage %% This is to create title page. The data are taken from TitlePageInfo.tex
+\makesectionpopup %% This will show section name slide before move to each section
+
+\import{slides/}{Foo.tex}
+
+%\begin{frame}[allowframebreaks]
+%    \frametitle{Literatur}
+%    \printbibliography
+%\end{frame}
+
+\end{document}
