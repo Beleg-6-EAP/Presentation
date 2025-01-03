@@ -18,6 +18,9 @@ jobs:
       - name: Update font cache
         run: fc-cache -fv
 
+      - name: List fonts for debugging
+        run: fc-list | grep "Liberation"
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
