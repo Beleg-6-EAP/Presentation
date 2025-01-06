@@ -4,18 +4,25 @@
 
 \begin{frame}{Service-oriented Architecture}
   \begin{itemize}
-    \item Service: Dienst, das eine Funktionalität kapselt.
-    Dieser kann aus mehreren Diensten bestehen
-    \item Service Provider: Bietet einen spezifischen Dienst an
-    \item Service Bus: Dienst, das die Kommunikation und Integration zwischen Service Consumer und Service Provider gewährleistet
-    \item Service Consumer: Nutzt einen bereitgestellten Dienst, dieses kann einen End-User oder ein anderer Dienst sein
-    \item Service Registry: Dient als zentrales Repository, die Informationen über die verfügbaren Services speichert (Interface-Vertrag und Endpoint)
+    \item Architekturmuster, die den Fokus auf lose gekoppelte Services legen, anstatt auf ein monolithisches Design
+    \item Services sind Dienste, die eine Funktionalität repräsentiert.
+    \item Service bieten Flexibilität, Wiederwendung und Skalierbarkeit
   \end{itemize}
 \end{frame}
+
+\begin{frame}{Service-oriented Architecture: Komponenten}
+  \begin{itemize}
+    \item Service Provider: Bietet einen spezifischen Dienst an
+    \item Broker: Dienst, das die Kommunikation zwischen Service Consumer und Service Provider gewährleistet
+    \item Service Consumer: Nutzt einen bereitgestellten Dienst, dieses kann einen End-User oder ein anderer Dienst sein
+    \item Service Registry: Sammlung von Metadaten zu Services und deren Provider
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{Service-oriented Architecture: Struktur}
   \begin{figure}[!h]
     \centering
-    \includegraphics[scale=0.55]{imglib/soa/soa}
+    \includegraphics[scale=0.80]{imglib/soa/soa}
     \caption{Aufbau der Service-oriented Architecture}
     \label{fig:soa}
   \end{figure}
@@ -23,7 +30,7 @@
 
 \begin{frame}{Service-oriented Architecture: Beispiel E-Commerce I}
   \begin{itemize}
-    \item \texttt{OrderService}: Ein Dienst, der die Erstellung von Bestellungen übernimmt und dabei den Versand- sowie den Bezahlvorgang automatisch initiiert.
+    \item \texttt{OrderService}: Dienst für Verwaltung von Bestellungen
     \item \texttt{PaymentService}: Dienst verantwortlich für die Abwicklung von Zahlungen
     \item \texttt{ShipmentService}: Dienst zuständig für den Versandprozess
   \end{itemize}
@@ -40,9 +47,8 @@
 
 \begin{frame}{Service-oriented Architecture: Agilität}
   \begin{itemize}
-    \item Services können unabhängig voneinander parallel entwickelt werden
-    \item Interfaces ermöglichen gute Kollaboration im Team
-    \item Kundenanforderungen können kurzfristig umgesetzt werden
+    \item Lose Kopplung ermöglicht die unabhängige Entwicklung von Services, wodurch Teams autonom arbeiten und die parallele Entwicklung gefördert wird
+    \item Dank loser Kopplung und autonomer Teams können Kundenanforderungen schnell umgesetzt werden
     \item Zeit- und Kosteneinsparungen durch die Wiederverwendung von Services
     \item Nachteil: Langfristig könnten sich Abhängigkeiten zwischen den Services entwickeln
     \end{itemize}
