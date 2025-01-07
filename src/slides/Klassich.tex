@@ -41,9 +41,8 @@
 \begin{frame}{Modular Monolith Architecture}
     \begin{itemize}
        \item Bisher: Eng gekoppelte Komponenten mit gegenseitigen Abhängigkeiten
-       \item Jetzt: Module minimal gekoppelt und durch klare Schnittstellen definiert
-       \item Alternative zur monolithischen Architektur, um die Abhängigkeiten zu reduzieren
-       \item Abhängigkeiten bestehen weiterhin, müssen jedoch vom Entwickler auf ein Minimum reduziert werden
+       \item Jetzt: Module für besser separation of concerns
+       \item Evolution monolithischen Architektur, um die Abhängigkeiten zu eliminieren
      \end{itemize}
 \end{frame}
 
@@ -51,15 +50,16 @@
     \begin{figure}[!h]
         \centering
         \includegraphics[scale=0.70]{imglib/mono/mono-example}
-        \caption{Aufbau einer Modular monolitische Architektur}
+        \caption{E-Commerce-Beispiel mit Modular Monolith Architektur}
         \label{fig:mono-modular}
     \end{figure}
 \end{frame}
 
 \begin{frame}{Modular Monolith Architecture: Agilität}
     \begin{itemize}
-      \item Da Module miteinander verbunden sind, ist die Skalierung von einzelnen Modulen schwierig
-      \item Abhängigkeiten zwischen Module verhindern weiterhin die parallele Entwicklung von Modulen
-      \item Fehler in einem Modul können die Verfügbarkeit des gesamten System beeinträchtigen
+      \item Klare Trennung der Module $\Rightarrow$ Höhe Cohesion $\Rightarrow$ kurze iterierte Release-Zyklen
+      \item Änderungen in einzelnen Modulen beeinträchtigen nicht mehr das gesamte System $\Rightarrow$ Änderungen selbst spät in der Entwicklung möglich
+      \item Lose Module $\Rightarrow$ einfache Testbarkeit $\Rightarrow$ Lieferung funktionierender Software
+      \item Aber: Höhe Anforderungen an Entwickler $\Rightarrow$ Integration Testing und regelmäßige Review und Refactoring notwendig
     \end{itemize}
 \end{frame}
