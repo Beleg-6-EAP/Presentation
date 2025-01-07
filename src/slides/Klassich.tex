@@ -4,13 +4,14 @@
 
 \begin{frame}{Monolith Architecture}
     \begin{itemize}
-        \item Früher: Einstiegsarchitektur für viele große Unternehmen wie Netflix
-        \item Komponenten sind in einem einzigen Code-Basis
-        \item Besonders geeignet für kleine Anwendungen
+        \item Monolith ist altgriechisch für \textit{einheitlicher Stein}
+        \item Einheitlich: Alles ist eins - alle Funktionalitäten in einer Komponente
+        \item Stein: Altes Material - früher gut. Heute schlecht?
+        \item Problem: Enge Kopplung
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Monolith Architecture: Beispiel E-Commerce I}
+\begin{frame}{Monolith Architecture: Beispiel E-Commerce}
     \begin{figure}[!h]
         \centering
         \includegraphics[scale=0.70]{imglib/mono/mono}
@@ -21,10 +22,17 @@
 
 \begin{frame}{Monotlith Architecture: Agilität}
     \begin{itemize}
-        \item Mit zunehmender Komplexität und des Code-Bases wird die Skalierung und Wartung schwieriger
-        \item Eng gekoppelte Komponenten verhindern die Wiederverwendung
-        \item Autonome Teams können nicht unabhängig voneinander einzelne Komponenten entwickeln
-        \item Änderungen an einer Komponente wirken sich auf andere Komponenten aus, was die Software-Lieferung verlangsamt
+        \item Enge Kopplung ist fatal
+        \begin{itemize}
+            \item Keine kleinen autonomen Teams
+            \item Erhöhte Komplexität und schwere Wartung $\Rightarrow$ längere Iterationen $\Rightarrow$ unflexibel
+            \item Funktionalitäten nicht wiederverwendbar $\Rightarrow$ Mehraufwand \& Duplikation $\Rightarrow$ Änderungen teuer
+            \item Isolierte Funktionstests sind möglicherweise aufwendig
+        \end{itemize}
+        \item Auslieferung nur im Ganzen \& längere Iterationen $\Rightarrow$ seltene Auslieferung
+        \item Horizontale Skalierung kaum möglich
+        \item Aber: System ist nicht verteilt $\Rightarrow$ Keine Intersystemkommunikation $\Rightarrow$ Geringe Time-to-Market \& möglicherweise einfache System-Tests
+        \item Ideal für lokale Anwendungen ohne Skalierungsbedarf bei welchen Flexibilität nicht notwendig ist
     \end{itemize}
 \end{frame}
 
