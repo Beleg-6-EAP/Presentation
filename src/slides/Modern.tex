@@ -1,5 +1,45 @@
 \section{Moderne Enterprise-Architektur}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%% Microservices Architecture %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Microservices Architecture}
+    \begin{itemize}
+        \item Unterteilung der Anwendung in Service Komponenten
+        \item Komponenten variieren in Granularität, sollten klein gehalten werden
+        \item Kommunikation über Netzwerkprotokolle
+        \item Service Komponenten sind unabhängig, entkoppelt voneinander
+        \item API-Gateway vermittelt zwischen Client und Services
+        \item Kommunikation über Services hinweg kann durch geteilte Datenbank stattfinden
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Microservices Architecture: Struktur}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.55]{imglib/microservices/microservices}
+        \caption{Aufbau einer Microservices Architecture}
+        \label{fig:microservices}
+    \end{figure}
+\end{frame}
+
+%% Beispiel E-Commerce I
+
+%% Beispiel E-Commerce II
+
+\begin{frame}{Microservices Architecture: Agilität}
+    \begin{itemize}
+        \item Lose Kopplung der Services $\Rightarrow$ einfaches Testen, Deployen und Entwickeln
+        \item Parallele Entwicklung und keine Abhängigkeiten $\Rightarrow$ geringe Time-to-Market
+        \item Kürzere Iterationen durch einfache Regressionstests
+        \item Live-Deployments können ohne Downtime aktualisiert werden
+        \item Services separat voneinander skalierbar
+        \item Aber: Orchestration der Services kann komplex werden
+        \item Aber: Einzelne Transaktionen durch verteilten Aufbau schwerer nachvollziehbar~\cite{architecturePatterns}
+        \item Fazit: In vielen agilen Umgebungen sinnvoll, aber nur mit angemessener Granularität
+    \end{itemize}
+\end{frame}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%% Microkernel Architecture %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Microkernel Architecture}
