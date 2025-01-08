@@ -1,6 +1,6 @@
 \section{Klassische Enterprise-Architektur}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%% Monolith Architecture %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% Monolithic Architecture %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Monolithic Architecture}
     \begin{itemize}
@@ -36,7 +36,7 @@
     \end{itemize}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%% Modular Monolith Architecture %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% Modular Monolithic Architecture %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{Modular Monolithic Architecture}
     \begin{itemize}
@@ -57,7 +57,10 @@
 
 \begin{frame}{Modular Monolithic Architecture: Agilität}
     \begin{itemize}
-      \item Änderungen in einzelnen Modulen beeinträchtigen nicht mehr das gesamte System $\Rightarrow$ Mehr Flexibilität im Vergleich zum normalen Monolithen
-        \item Klare Trennung der Module $\Rightarrow$ kleinen autonomen Teams
+        \item Problem: Mit Wachstum des Monolithen erhöht sich die Komplexität $\Rightarrow$ Lösung: Module
+        \item Klare Trennung der Module und Kommunikation durch definite Interface $\Rightarrow$ kleine autonome Teams
+        \item Modale sind wiederverwendbar und austauschbar $\Rightarrow$ Schnellere Entwicklung und geringere Kosten
+        \item Änderungen in einzelnen Modulen beeinträchtigen nicht mehr das gesamte System $\Rightarrow$ Mehr Flexibilität im Vergleich zum normalen Monolithen
+        \item Aber: Es besteht nicht die Möglichkeit, verschieden Technologien zu verwenden $\Rightarrow$ Erschwert Adoption neue Technologien und das Profitieren von deren Vorteilen
     \end{itemize}
 \end{frame}
