@@ -42,11 +42,11 @@ jobs:
         if: github.ref_name == 'main'
         run: |
           git clone https://x-access-token:${{ secrets.SECRET_TOKEN }}@github.com/Beleg-6-EAP/Abgabe.git target-repo
-          cp main.pdf target-repo/"Beleg 6 - Enterprise Architektur-Muster.pdf"
+          cp main.pdf target-repo/"Präsentation Beleg 6 - Enterprise Architektur-Muster.pdf"
           cd target-repo
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add "Beleg 6 - Enterprise Architektur-Muster.pdf"
+          git add "Präsentation Beleg 6 - Enterprise Architektur-Muster.pdf"
           git commit -m "CI: add compiled PDF" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.SECRET_TOKEN }}@github.com/Beleg-6-EAP/Abgabe.git
         env:
