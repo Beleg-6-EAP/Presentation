@@ -36,3 +36,17 @@ jobs:
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Push PDF to Abgabe repository
+      - name: Push PDF to another repository
+        run: |
+          git clone https://x-access-token:${{ secrets.SECRET_TOKEN }}@github.com/Beleg-6-EAP/Abgabe.git
+          cd Abgabe
+          cp ../main.pdf "Beleg 6 - Enterprise Architektur-Muster.pdf"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add "Beleg 6 - Enterprise Architektur-Muster.pdf"
+          git commit -m "CI: add compiled PDF with specific name"
+          git push https://x-access-token:${{ secrets.SECRET_TOKEN }}@github.com/Beleg-6-EAP/Abgabe.git
+        env:
+          SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
