@@ -57,10 +57,10 @@
 
 \begin{frame}{Modular Monolithic Architecture: Agilität}
     \begin{itemize}
-        \item Problem: Mit Wachstum des Monolithen erhöht sich die Komplexität $\Rightarrow$ Lösung: Module
-        \item Klare Trennung der Module und Kommunikation durch definite Interface $\Rightarrow$ kleine autonome Teams
-        \item Modale sind wiederverwendbar und austauschbar $\Rightarrow$ Schnellere Entwicklung und geringere Kosten
+        \item Bessere Einstiegsarchitektur als Monolithen $\Rightarrow$ Reduzierte Komplexität und bessere Wartbarkeit
         \item Änderungen in einzelnen Modulen beeinträchtigen nicht mehr das gesamte System $\Rightarrow$ Mehr Flexibilität im Vergleich zum normalen Monolithen
+        \item Aber: Kommunikation inter-modular $\Rightarrow$ Komplexität steigt $\Rightarrow$ Wartung schwieriger
         \item Aber: Es besteht nicht die Möglichkeit, verschieden Technologien zu verwenden $\Rightarrow$ Erschwert Adoption neue Technologien und das Profitieren von deren Vorteilen
+        \item Aber: System aus eng gekoppelten Modulen $\Rightarrow$ Funktionalitäten nicht wiederverwendbar $\Rightarrow$ seltene Auslieferung
     \end{itemize}
 \end{frame}
