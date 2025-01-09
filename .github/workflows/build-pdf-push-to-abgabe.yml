@@ -2,10 +2,10 @@ name: Push PDF to Abgabe
 
 permissions:
   contents: write
-
 on:
   push:
-    branches: [ "master" ]
+    branches:
+      - '*'
 
 jobs:
   push_pdf:
@@ -16,7 +16,6 @@ jobs:
 
       # Push the PDF to the organization repository Abgabe
       - name: Push PDF to Organization Repository
-        if: github.ref == 'refs/heads/master'
         run: |
           git clone https://x-access-token:${{ secrets.SECRET_TOKEN }}@github.com/Beleg-6-EAP/Abgabe.git target-repo
           cp main.pdf target-repo/"Präsentation Beleg 6 - Enterprise Architektur-Muster.pdf"
