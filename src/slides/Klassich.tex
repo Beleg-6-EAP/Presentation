@@ -1,7 +1,33 @@
 \section{Klassische Enterprise-Architektur}
 
-\begin{frame}{Foo}
+%%%%%%%%%%%%%%%%%%%%%%%%%% Cloud-Native Architecture %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Layered Architecture}
     \begin{itemize}
-        \item Bar
+        \item Bisher:
+        \item Jetzt: Strukturierung in Schichten
+        \item In der Vergangenheit sehr beliebt Architektur-Muster
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Layered Architecture: Komponenten}
+    \begin{itemize}
+        \item Schichten: Präsentation, Buissness-Logik, Database
+        \item The Open/Closed Layers concept
+        \item The Separation of Concerns
+        \item The Layers of isolation concept
+        \item
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Layered Architecture: Agilität}
+    \begin{itemize}
+        \item Gute Einstiegsarchitektur
+        \item Einfache Testbarkeit der Schichten durch Nutzung von Mocks und Stubs
+        \item Klare Trennung von Schichten $\Rightarrow$ kleine autonome Teams
+        \item Schichten sind lose gekoppelt und besitzen klar definierte Interfaces$\Rightarrow$ Austauschbarkeit und Wiederverwendbarkeit
+        \item Keine drastische Änderung für die Einführung von neuen Schichten $\Rightarrow$ Erweiterbarkeit
+        \item Aber: Architecture sinkhole anti-pattern
+        \item Aber: Gefahr der Entstehung von zyklische Abhängigkeiten $\Rightarrow$ Monolithen
     \end{itemize}
 \end{frame}
