@@ -30,9 +30,9 @@
             \item Isolierte Funktionstests sind möglicherweise aufwendig
         \end{itemize}
         \item Auslieferung nur im Ganzen \& längere Iterationen $\Rightarrow$ seltene Auslieferung
+        \item Verpflichtung auf genau eine Technologie
         \item Horizontale Skalierung kaum möglich
         \item Aber: System ist nicht verteilt $\Rightarrow$ Keine Intersystemkommunikation $\Rightarrow$ Geringe Time-to-Market \& möglicherweise einfache System-Tests
-        \item Ideal für lokale Anwendungen ohne Skalierungsbedarf bei welchen Flexibilität nicht notwendig ist
     \end{itemize}
 \end{frame}
 
@@ -40,9 +40,9 @@
 
 \begin{frame}{Modular Monolithic Architecture}
     \begin{itemize}
-       \item Bisher: Eine eng gekoppelte Komponenten
-       \item Jetzt: Eine Komponente mit lose gekoppelten Modulen
-       \item Evolution monolithischen Architektur, um die Abhängigkeiten zu eliminieren
+       \item Bisher: Eine eng gekoppelte Komponente
+       \item Jetzt: Eine Komponente mit lose gekoppelten Teil-Funktionalitäten (Modulen)
+       \item Evolution monolithischer Architektur, um Komplexität zu verringern
      \end{itemize}
 \end{frame}
 
@@ -57,10 +57,16 @@
 
 \begin{frame}{Modular Monolithic Architecture: Agilität}
     \begin{itemize}
-        \item Bessere Einstiegsarchitektur als Monolithen $\Rightarrow$ Reduzierte Komplexität und bessere Wartbarkeit
-        \item Änderungen in einzelnen Modulen beeinträchtigen nicht mehr das gesamte System $\Rightarrow$ Mehr Flexibilität im Vergleich zum normalen Monolithen
-        \item Aber: Kommunikation inter-modular $\Rightarrow$ Komplexität steigt $\Rightarrow$ Wartung schwieriger
-        \item Aber: Es besteht nicht die Möglichkeit, verschieden Technologien zu verwenden $\Rightarrow$ Erschwert Adoption neue Technologien und das Profitieren von deren Vorteilen
-        \item Aber: System aus eng gekoppelten Modulen $\Rightarrow$ Funktionalitäten nicht wiederverwendbar $\Rightarrow$ seltene Auslieferung
+        \item Im Vergleich zu Monolith: Verbesserungen bezüglich Entwicklung
+        \begin{itemize}
+            \item Reduzierte Komplexität $\Rightarrow$ bessere Wartbarkeit
+            \item Modularisierung ermöglicht kleine semi-autonome Teams
+        \end{itemize}
+        \item Noch immer problematisch:
+        \begin{itemize}
+            \item Deployment im Ganzen
+            \item Keine horizontale Skalierung
+            \item Keine Wiederverwendbarkeit von Funktionalitäten
+        \end{itemize}
     \end{itemize}
 \end{frame}
