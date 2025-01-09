@@ -2,10 +2,10 @@ name: Push PDF to Abgabe
 
 permissions:
   contents: write
+
 on:
   push:
-    branches:
-      - '*'
+    branches: [ "master" ]
 
 jobs:
   push_pdf:
