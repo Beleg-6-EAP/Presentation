@@ -4,17 +4,17 @@
 
 \begin{frame}{Service-oriented Architecture}
   \begin{itemize}
-    \item Bisher: Eng gekoppelte Komponenten, die nicht isoliert voneinander verwendet werden können
-    \item Jetzt: Architekturmuster, die den Fokus auf lose gekoppelte Dienste liegt
-    \item Service-oriented Architecture (SOA) ermöglicht die Wiederwendung von Funktionalitäten
+    \item Bisher: Eng gekoppelte Funktionalitäten
+    \item Jetzt: Lose Kopplung von Funktionalitäten durch Kapselung als Dienst
+    \item Ziel Service-oriented Architecture (SOA): Wiederwendung von Funktionalitäten
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Service-oriented Architecture: Komponenten}
   \begin{itemize}
-    \item Service Provider: Bietet einen spezifischen Dienst an
-    \item Broker: Dienst, das die Kommunikation zwischen Service Consumer und Service Provider gewährleistet
-    \item Service Consumer: Nutzt einen bereitgestellten Dienst, dieses kann einen End-User oder ein anderer Dienst sein
+    \item Service Provider: Stellt spezifischen Dienst bereit
+    \item Service Consumer: Nutzt bereitgestellten Dienst
+    \item Broker: Vermittler, der Kommunikation zwischen Consumer und Provider regelt
     \item Service Registry: Sammlung von Metadaten zu Services und deren Provider
   \end{itemize}
 \end{frame}
@@ -31,8 +31,8 @@
 \begin{frame}{Service-oriented Architecture: Beispiel E-Commerce I}
   \begin{itemize}
     \item \texttt{OrderService}: Dienst für Verwaltung von Bestellungen
-    \item \texttt{PaymentService}: Dienst verantwortlich für die Abwicklung von Zahlungen
-    \item \texttt{ShipmentService}: Dienst zuständig für den Versandprozess
+    \item \texttt{PaymentService}: Dienst für die Abwicklung von Zahlungen (Service von PayPal, \ldots)
+    \item \texttt{ShipmentService}: Dienst für den Versand (Service von DHL, \ldots)
   \end{itemize}
 \end{frame}
 
@@ -47,9 +47,11 @@
 
 \begin{frame}{Service-oriented Architecture: Agilität}
   \begin{itemize}
-    \item Lose Kopplung ermöglicht die unabhängige Entwicklung von Services, wodurch Teams autonom arbeiten und die parallele Entwicklung gefördert wird
-    \item Dank loser Kopplung und autonomer Teams können Kundenanforderungen schnell umgesetzt werden
-    \item Zeit- und Kosteneinsparungen durch die Wiederverwendung von Services
-    \item Nachteil: Langfristig könnten sich Abhängigkeiten zwischen den Services entwickeln
+    \item Wie bei modularem Monolithen: Lose Kopplung $\Rightarrow$ kleine autonome Teams
+    \item Aber zusätzlich: Deployment in Teams $\Rightarrow$ kürzere Iterationen \& häufigere Auslieferung
+    \item Dadurch: Flexibler gegenüber wechselnden Anforderungen
+    \item Zeit- und Kosteneinsparungen durch Wiederverwendung von Diensten
+    \item Eigenständige Dienste ermöglichen horizontale Skalierung
+    \item Aber: Langfristig Abhängigkeiten zwischen Diensten, besonders für grob-granulare Dienste
     \end{itemize}
 \end{frame}
