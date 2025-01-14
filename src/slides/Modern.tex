@@ -171,3 +171,40 @@
         \item Achtung: Vendor-Lock-In durch proprietäre Fully Managed Cloud-Services
     \end{itemize}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Cloud-Native Architecture %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Layered Architecture}
+    \begin{itemize}
+        \item Bisher: Microservice für jedes Service
+        \item Problem: Authentifizierung Modul in jedem Service
+        \item Jetzt: Strukturierung in Schichten für bessere Wartbarkeit
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Layered Architecture: Komponenten}
+    \begin{itemize}
+        \item Organization des Systems in Schichten
+        \item The Separation of Concerns
+        \item The Layers of Isolation
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Microservices + Layered Architecture: Struktur}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.55]{imglib/layered/ecommerce-example}
+        \caption{Schichtenmodell}
+        \label{fig:layered}
+    \end{figure}
+\end{frame}
+
+    \begin{frame}{Microservices + Layered Architecture: Agilität}
+        \begin{itemize}
+            \item Klare Trennung von Zuständigkeiten $\Rightarrow$ kleine autonome Teams
+            \item Funktionalitäten wiederverwendbar in mehreren Services $\Rightarrow$ Keine Duplikation von Code $\Rightarrow$ Auslieferung in kurzen Intervallen
+            \item Änderungen an Microservice nur an einer Stelle $\Rightarrow$ Schnelle Reaktion auf Änderungen
+            \item Jedes Microservice muss sich nur um eigene Business-Logik kümmern $\Rightarrow$ Fokus auf feingranulare Funktionalität $\Rightarrow$ Schnelle Auslieferung
+        \end{itemize}
+    \end{frame}
+\end{frame}
