@@ -5,7 +5,7 @@
 \begin{frame}{Microservices Architecture}
     \begin{itemize}
         \item Bisher: SOA - Aufteilung in Services
-        \item Jetzt: fein granuliertere, vollständig isolierte Services
+        \item Jetzt: feiner granulierte und vollständig isolierte Services
         \item Jeder Service hat eigene private Persistenz
         \item Kommunikation untereinander über Netzwerkprotokolle
         \item API-Gateway vermittelt zwischen Client und Services
@@ -25,8 +25,8 @@
     \begin{itemize}
         \item API-Gateway für Client Anfragen
         \item Auslagerung der Business Logik in isolierte Services
-        \item Unabhängige Services für Bestellung, Bezahlung, Versand
-        \item Aufteilung der Zentralen Datenbank in private Persistenzen
+        \item Unabhängige Services für Bestellung, Bezahlung und Versand
+        \item Aufteilung der zentralen Datenbank in private Persistenzen
         \item Erweiterung durch zusätzliche Services, horizontale Skalierung gut möglich
         \item Architekturmuster sehr passend für Anwendungsfall
     \end{itemize}
@@ -44,12 +44,12 @@
 
 \begin{frame}{Microservices Architecture: Agilität}
     \begin{itemize}
-        \item Lose Kopplung der Services $\Rightarrow$ einfaches Testen, Deployen und Entwickeln
+        \item Lose Kopplung der Services $\Rightarrow$ einfaches Testen, Ausliefern und Entwickeln
         \item Kürzere Iterationen durch einfache Regressionstests
         \item Live-Deployments können ohne Downtime aktualisiert werden
         \item Services separat voneinander skalierbar
         \item Aber: Geringere Performance als andere Muster, da Netzwerklatenzen
-        \item Aber: Aufwendige Integrationstest durch hohe Anzahl an Komponenten
+        \item Aber: Aufwendige Integrationstests durch hohe Anzahl an Komponenten
         \item Aber: Initialer Aufwand höher, da Spezifizierung von Schnittstellen und Architektur nötig~\cite{architecturePatterns}
         \item Fazit: In vielen agilen Umgebungen sinnvoll, aber angemessene Granularität und korrekte Aufteilung wichtig
     \end{itemize}
