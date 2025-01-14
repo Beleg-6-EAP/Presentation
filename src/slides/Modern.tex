@@ -179,18 +179,12 @@
         \item Bisher: Microservice für jedes Service
         \item Problem: Authentifizierung Modul in jedem Service
         \item Jetzt: Strukturierung in Schichten für bessere Wartbarkeit
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Layered Architecture: Komponenten}
-    \begin{itemize}
-        \item Organization des Systems in Schichten
         \item The Separation of Concerns
         \item The Layers of Isolation
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Microservices + Layered Architecture: Struktur}
+\begin{frame}{Microservices + Layered Architecture: Beispiel E-Commerce}
     \begin{figure}[!h]
         \centering
         \includegraphics[scale=0.55]{imglib/layered/ecommerce-example}
@@ -199,11 +193,13 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Microservices + Layered Architecture: Agilität}
+\begin{frame}{Layered Architecture: Agilität}
     \begin{itemize}
-        \item Klare Trennung von Zuständigkeiten $\Rightarrow$ kleine autonome Teams
-        \item Funktionalitäten wiederverwendbar in mehreren Services $\Rightarrow$ Keine Duplikation von Code $\Rightarrow$ Auslieferung in kurzen Intervallen
-        \item Änderungen an Microservice nur an einer Stelle $\Rightarrow$ Schnelle Reaktion auf Änderungen
-        \item Jedes Microservice muss sich nur um eigene Business-Logik kümmern $\Rightarrow$ Fokus auf feingranulare Funktionalität $\Rightarrow$ Schnelle Auslieferung
+        \item Klare Trennung von Schichten $\Rightarrow$ kleine autonome Teams
+        \item Schichten sind lose gekoppelt $\Rightarrow$ Einfache Einführung neue Schichten $\Rightarrow$ Einfache Skalierung
+        \item Klare Trennung $\Rightarrow$ Bessere Testbarkeit, Wartbarkeit und Organisation $\Rightarrow$ Schnelle Auslieferung
+        \item Funktionalitäten wiederverwendbar in mehreren Schichten $\Rightarrow$ Keine Duplikation von Code $\Rightarrow$ Auslieferung in kurzen Intervallen
+        \item Änderungen in einer Schicht wirken sich nicht auf das gesamte System $\Rightarrow$ Schnelle Reaktion auf Änderungen
+        \item Exzellente Kombination mit Microservices
     \end{itemize}
 \end{frame}
