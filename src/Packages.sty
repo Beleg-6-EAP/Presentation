@@ -18,8 +18,12 @@
 \usepackage{xcolor} % For custom colors
 
 % Custom commands for green ticks and red crosses
-\newcommand{\cmark}{\textcolor{green}{\ding{51}}} % Green checkmark
+\definecolor{darkgreen}{RGB}{37, 112, 60}
+\newcommand{\cmark}{\textcolor{darkgreen}{\ding{51}}} % Green checkmark
 \newcommand{\xmark}{\textcolor{red}{\ding{55}}}   % Red cross
+
+% Command for rotating text 90 degrees
+\newcommand*\rot{\rotatebox{90}}
 
 % --- Code ---
 \usepackage{minted} % Includes several programming languages and styles, visit --https://www.ntnu.no/wiki/display/imtsoftware/Code+in+LaTeX-- for more information and examples
