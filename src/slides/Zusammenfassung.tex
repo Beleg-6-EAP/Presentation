@@ -1,5 +1,30 @@
 \section*{Zusammenfassung}
 
+\begin{frame}{Zusammenfassung: Vergleich}
+\begin{table}[H]
+    \scalebox{0.9}{
+        \begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+            \hline
+            & \rot{Monolith}     & \rot{Mod. Monol.}  & \rot{SOA} & \rot{Microservices} & \rot{Layered} & \rot{EDA} & \rot{Cloud Native}  & \rot{Microkernel} \\
+            \hline
+            Time-To-Market         & \cmark\cmark\cmark & \cmark\cmark\cmark & 0         & \xmark              & ?             & \xmark             & \cmark\cmark & \xmark\xmark\xmark \\
+            \hline
+            Skalierbarkeit         & \xmark\xmark\xmark & \xmark\xmark\xmark & \xmark    & \cmark\cmark\cmark  & ? & \cmark\cmark\cmark & \cmark\cmark\cmark & 0 \\
+            \hline
+            Kostenflexibilität     & \xmark\xmark       & \xmark\xmark       & \xmark    & \cmark              & ?             & \cmark             & \cmark\cmark\cmark & \xmark \\
+            \hline
+            Anforderungsänderungen & \xmark\xmark\xmark & \xmark\xmark       & \cmark    & \cmark\cmark\cmark & \cmark\cmark & \cmark\cmark\cmark & \cmark\cmark\cmark & \cmark\cmark \\
+            \hline
+            Erweiterbarkeit        & \xmark\xmark\xmark & \xmark\xmark       & 0         & \cmark\cmark        & \cmark\cmark  & \cmark\cmark & \cmark\cmark & \cmark\cmark\cmark \\
+            \hline
+            Auslieferung           & \xmark\xmark\xmark & \xmark\xmark\xmark & \cmark    & \cmark\cmark        & \cmark        & \cmark\cmark & \cmark\cmark\cmark & \cmark\cmark \\
+            \hline
+        \end{tabular}}
+    \caption{Vergleich der Architekturmuster}
+    \label{tab:overview}
+\end{table}
+\end{frame}
+
 \begin{frame}{Zusammenfassung}
     \begin{itemize}
         \item EA ist dynamische Strategie (Vision), um IT auf Business auszurichten
